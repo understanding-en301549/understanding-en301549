@@ -5,12 +5,17 @@
   "type": "module",
   "scripts": {
     "build": "eleventy",
+    "check:a11y": "node scripts/check-a11y.mjs",
+    "check:links": "node scripts/check-links.mjs",
     "start": "eleventy --serve",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
+    "@axe-core/playwright": "^4.13.0",
+    "linkinator": "^8.1.0",
+    "playwright": "^1.63.0",
     "prettier": "3.9.8"
   }
 }
