@@ -1,6 +1,6 @@
 # Understanding EN 301 549
 
-Understanding EN 301 549 is a community project writing plain-language explanations of the accessibility requirements in EN 301 549 that WCAG does not cover: what each requirement is trying to achieve, and what it means in practice.
+Understanding EN 301 549 is a community project writing plain-language explanations of the accessibility requirements in EN 301 549 that WCAG, the W3C web accessibility standard, does not cover: what each requirement is trying to achieve, and what it means in practice.
 
 ## Why this exists
 
@@ -36,13 +36,13 @@ Nothing here changes what EN 301 549 requires; only the standard itself does tha
 
 Early. No Understanding documents have been published yet.
 
-What exists today is the groundwork: this repository, its licensing, and the standing orders that coding agents work to. The site, the document template, and the first documents are all still ahead.
+What exists today is the groundwork: this repository and its licensing. The site, the document template, and the first documents are all still ahead.
 
 ## How to contribute
 
 Anyone can contribute — you do not have to be an editor. Right now the most valuable contributions are issues: requirements you have seen interpreted in conflicting ways, disagreements you have had to argue out in real audits, or an offer to draft a document.
 
-Open an issue or a pull request on this repository. Two things always apply: contributions are accepted under the project licences below, and AI-assisted work is welcome but must be disclosed on the contribution. Fuller contributor guidance is being written; until it is here, an issue is the best place to start.
+Open an issue or a pull request on this repository. Two things always apply: contributions are accepted under the project licences below, and AI-assisted work is welcome but must be disclosed on the contribution. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Project details
 
