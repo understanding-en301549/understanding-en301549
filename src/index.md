@@ -13,8 +13,9 @@ standard; it does not replace the standard itself.
 
 ## Contribute
 
-Suggestions, corrections, and other contributions are welcome. To get
-involved, [visit the project on GitHub](https://github.com/understanding-en301549/understanding-en301549).
+Suggestions, corrections, and other contributions are welcome. See
+[how to contribute](/contributing/), or
+[visit the project on GitHub](https://github.com/understanding-en301549/understanding-en301549).
 
 ## Made possible by
 
