@@ -27,3 +27,12 @@ jobs:
 
       - name: Build site
         run: npm run build
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Check accessibility of built HTML
+        run: npm run check:a11y
+
+      - name: Check links in built HTML
+        run: npm run check:links

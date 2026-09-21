@@ -28,3 +28,7 @@ Run `npm run format` before you open a pull request; CI checks it with `npm run 
 ## Governance
 
 Who the editors are and how decisions are made is in [GOVERNANCE.md](GOVERNANCE.md).
+
+## Automated checks
+
+CI builds the site, then runs axe-core (WCAG 2.2 AA) and a link check against the built HTML. Run them locally with `npm run build`, `npm run check:a11y`, and `npm run check:links`.
