@@ -6,7 +6,8 @@ title: Contributing
 # Contributing
 
 Anyone may open issues and pull requests. Editors review contributions and
-merge pull requests.
+merge pull requests. Participation is covered by the
+[Code of Conduct](https://github.com/understanding-en301549/understanding-en301549/blob/main/CODE_OF_CONDUCT.md).
 
 - [Open an issue](https://github.com/understanding-en301549/understanding-en301549/issues/new)
 - [Open a pull request](https://github.com/understanding-en301549/understanding-en301549/compare)

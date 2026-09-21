@@ -10,7 +10,8 @@ body {
 }
 
 header,
-main {
+main,
+footer {
   box-sizing: border-box;
   margin-inline: auto;
   max-width: 72ch;
