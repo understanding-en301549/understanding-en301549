@@ -4,7 +4,7 @@ Understanding EN 301 549 is a community project writing plain-language explanati
 
 ## Why this exists
 
-EN 301 549 is the accessibility standard used across Europe for ICT products and services, covering websites, software, hardware, documents, and the support around them. It is the standard behind the European Accessibility Act and the EU's Web Accessibility Directive.
+EN 301 549 is the accessibility standard used across Europe for ICT products and services, covering websites, software, hardware, documents, and the support around them. It is the standard behind the European Accessibility Act (EAA) and the EU's Web Accessibility Directive (WAD).
 
 Large parts of it are WCAG. The chapters covering web content, non-web documents and software are built directly on the WCAG success criteria, which EN 301 549 adopts rather than rewrites. For those requirements, help already exists: the W3C, which publishes WCAG, also publishes a companion series called Understanding WCAG — one page per success criterion, setting out its intent, how it applies, and where the hard edges are. When two auditors disagree about a WCAG criterion, that series is usually what settles the argument.
 
@@ -18,13 +18,6 @@ These documents are written for accessibility auditors, developers, designers, a
 
 Procurement staff reading accessibility claims they need to assess will find these documents useful too.
 
-## What a document covers
-
-Take clause 5.2, on activating accessibility features. Paraphrased: where a product has accessibility features, it must be possible to switch those features on without needing the ability that the feature exists to compensate for. A blind user should not have to see the screen in order to turn on speech output.
-
-Put that way it sounds obvious, but in an audit the questions come quickly. Does a setting buried several menus deep count? What about a device that can only be configured through a companion app on a phone? Is a printed quick-start guide enough? Does a feature the product ships with but does not document fall in scope at all?
-
-An Understanding document for that clause would set out what the requirement is protecting, which of those situations meet it and which do not, and the reasoning behind each answer so that two people working separately arrive at the same place.
 
 ## Unofficial status
 
@@ -34,19 +27,12 @@ Nothing here changes what EN 301 549 requires; only the standard itself does tha
 
 ## Status
 
-Early. No Understanding documents have been published yet.
+**This project is in its early stages**. It has come out of a series of workshops organized by the [IAAP](https://www.accessibilityassociation.org/). Our aim is to (eventually) write understanding documents for all requirements in EN 301 549 (not already covered by Understand WCAG).
 
-What exists today is the groundwork: this repository and its licensing. The site, the document template, and the first documents are all still ahead.
 
 ## How to contribute
 
-Anyone can contribute — you do not have to be an editor. Right now the most valuable contributions are issues: requirements you have seen interpreted in conflicting ways, disagreements you have had to argue out in real audits, or an offer to draft a document.
+Anyone can contribute. You do not have to be an editor. Right now the most valuable contributions are issues: requirements you have seen interpreted in conflicting ways, disagreements you have had to argue out in real audits, or an offer to draft a document.
 
 Open an issue or a pull request on this repository. Two things always apply: contributions are accepted under the project licences, and AI-assisted work is welcome but must be disclosed on the contribution. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Project details
-
-- **Language** — English only. Translations are not planned.
-- **Site** — The public site address will be added here when it is known.
-- **Made possible by** — Organisation names will be listed here in text once they are confirmed. This project does not use organisation logos.
-- **Licence** — Code is under the MIT License, see [LICENSE-CODE](LICENSE-CODE). Project content is under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), see [LICENSE-CONTENT](LICENSE-CONTENT). Requirement text quoted from EN 301 549 is © ETSI, CEN and CENELEC and is **not** covered by those licences, see [LICENSE](LICENSE).
