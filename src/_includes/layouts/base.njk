@@ -7,40 +7,56 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    {% set navItems = [
+      { url: "/", label: "Home" },
+      { url: "/about/", label: "About" },
+      { url: "/requirements/", label: "Requirements" },
+      { url: "/contributing/", label: "Contributing" }
+    ] %}
     <header>
-      <p class="notice">
-        This is an unofficial community project. It is not affiliated with or
-        endorsed by ETSI, CEN, or CENELEC.
-      </p>
-      <nav aria-label="Site">
+      <div class="masthead inner">
+        <a class="site-title" href="/">Understanding EN 301 549</a>
+        <p class="site-tagline">
+          An unofficial explainer for Europe's accessibility standard
+        </p>
+      </div>
+      <nav class="site-nav" aria-label="Site">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/requirements/">Requirements</a></li>
-          <li><a href="/contributing/">Contributing</a></li>
+          {% for item in navItems %}
+          <li>
+            <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          </li>
+          {% endfor %}
         </ul>
       </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" class="inner">
       {{ content | safe }}
     </main>
 
     <footer>
-      <p>
-        This site is maintained by
-        <a href="https://github.com/understanding-en301549/understanding-en301549/graphs/contributors">community contributors</a>,
-        who participate in a personal capacity.
-      </p>
-      <p>
-        Code is licensed under MIT. Project content is licensed under CC BY 4.0.
-      </p>
-      <nav aria-label="Footer">
-        <ul>
-          <li><a href="/accessibility/">Accessibility statement</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-        </ul>
-      </nav>
+      <div class="inner">
+        <p>
+          This is an unofficial community project. It is not affiliated with or
+          endorsed by ETSI, CEN, or CENELEC.
+        </p>
+        <p>
+          This site is maintained by
+          <a href="https://github.com/understanding-en301549/understanding-en301549/graphs/contributors">community contributors</a>,
+          who participate in a personal capacity.
+        </p>
+        <p>
+          Code is licensed under MIT. Project content is licensed under CC BY 4.0.
+        </p>
+        <nav class="footer-nav" aria-label="Footer">
+          <ul>
+            <li><a href="/accessibility/">Accessibility statement</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>
