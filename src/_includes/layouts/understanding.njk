@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  {% if notForCitation %}
+    <p class="notice" role="status">
+      <strong>This page is not a requirement and must not be cited.</strong>
+      It is a template preview only.
+    </p>
+  {% endif %}
+
+  {% if authors %}
+    <ul>
+      {% for author in authors %}
+        <li>{{ author.name }}{% if author.affiliation %}, {{ author.affiliation }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if status %}
+    <p>Status: {{ status }}</p>
+  {% endif %}
+
+  {% if hideRequirement == false and requirement %}
+    <section>
+      <h2>Requirement</h2>
+      <p>{{ requirement }}</p>
+    </section>
+  {% endif %}
+
+  {{ content | safe }}
+</article>
