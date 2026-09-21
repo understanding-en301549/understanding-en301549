@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <h1>{{ title }}</h1>
+
+  {% if notForCitation %}
+    <p class="notice">
+      <strong>This page is not a requirement and must not be cited.</strong>
+      It is a preview of the Understanding document template.
+    </p>
+  {% endif %}
+
+  <dl>
+    {% if status %}
+      <dt>Status</dt>
+      <dd>{{ status }}</dd>
+    {% endif %}
+    {% if authors %}
+      <dt>Authors</dt>
+      {% for author in authors %}
+        <dd>{{ author.name }}{% if author.affiliation %}, {{ author.affiliation }}{% endif %}</dd>
+      {% endfor %}
+    {% endif %}
+  </dl>
+
+  {# The requirement field holds quoted clause text. It stays hidden unless a
+     page sets hideRequirement to false, which must not happen while the
+     project has no permission to reproduce EN 301 549 text. #}
+  {% if requirement and hideRequirement == false %}
+    <h2>Requirement</h2>
+    <p>{{ requirement }}</p>
+  {% endif %}
+
+  {{ content | safe }}
+</article>
