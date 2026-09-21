@@ -1,0 +1,28 @@
+This repository uses two licences. A copyright carve-out applies to
+quoted EN 301 549 requirement text.
+
+## Code (MIT)
+
+The software in this repository (including build and site code) is
+licensed under the MIT License. The full licence text is in
+LICENSE-CODE.
+
+## Project content (CC BY 4.0)
+
+Original project content in this repository (including Understanding
+documents and other writing produced for this project) is licensed
+under Creative Commons Attribution 4.0 International. The full licence
+text is in LICENSE-CONTENT.
+
+A human-readable summary of CC BY 4.0 is available at
+https://creativecommons.org/licenses/by/4.0/
+
+## EN 301 549 requirement text (not licensed here)
+
+Requirement text quoted from EN 301 549 is © ETSI, CEN and CENELEC.
+It is not covered by the MIT License or by CC BY 4.0.
+
+Anyone forking or copying this repository does not receive a licence
+to reproduce that quoted text. The quoted text does not travel with
+the repository under either project licence. Permission to reproduce
+it, if any, must come from ETSI, CEN and CENELEC.
