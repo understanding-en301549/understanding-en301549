@@ -16,6 +16,16 @@ const WCAG_22_AA_TAGS = [
   "wcag22aa",
 ];
 
+// A violation's target is an array holding one selector per frame, and a
+// selector can itself be an array of selectors that walk down through shadow
+// roots. Frame boundaries print as ">>" and shadow root boundaries as ">>>".
+function formatTarget(selector, delimiter = " >> ") {
+  if (!Array.isArray(selector)) {
+    return selector;
+  }
+  return selector.map((part) => formatTarget(part, " >>> ")).join(delimiter);
+}
+
 const siteDir = path.resolve("_site");
 
 try {
@@ -54,7 +64,7 @@ try {
           `  ${violation.id} (${violation.impact}): ${violation.help}`,
         );
         for (const node of violation.nodes) {
-          console.error(`    ${node.target.join(", ")}`);
+          console.error(`    ${formatTarget(node.target)}`);
         }
       }
     } else {
