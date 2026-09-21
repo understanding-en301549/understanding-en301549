@@ -18,7 +18,6 @@ These documents are written for accessibility auditors, developers, designers, a
 
 Procurement staff reading accessibility claims they need to assess will find these documents useful too.
 
-
 ## Unofficial status
 
 These documents are unofficial. They have no standing with ETSI, CEN, or CENELEC, and this project is not an ETSI, CEN, or CENELEC publication. Editors take part in a personal capacity, not on behalf of their employers.
@@ -29,10 +28,8 @@ Nothing here changes what EN 301 549 requires; only the standard itself does tha
 
 **This project is in its early stages**. It has come out of a series of workshops organized by the [IAAP](https://www.accessibilityassociation.org/). Our aim is to (eventually) write understanding documents for all requirements in EN 301 549 (not already covered by Understand WCAG).
 
-
 ## How to contribute
 
 Anyone can contribute. You do not have to be an editor. Right now the most valuable contributions are issues: requirements you have seen interpreted in conflicting ways, disagreements you have had to argue out in real audits, or an offer to draft a document.
 
 Open an issue or a pull request on this repository. Two things always apply: contributions are accepted under the project licences, and AI-assisted work is welcome but must be disclosed on the contribution. See [CONTRIBUTING.md](CONTRIBUTING.md).
-
