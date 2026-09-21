@@ -33,3 +33,7 @@ Nothing here changes what EN 301 549 requires; only the standard itself does tha
 Anyone can contribute. You do not have to be an editor. Right now the most valuable contributions are issues: requirements you have seen interpreted in conflicting ways, disagreements you have had to argue out in real audits, or an offer to draft a document.
 
 Open an issue or a pull request on this repository. Two things always apply: contributions are accepted under the project licences, and AI-assisted work is welcome but must be disclosed on the contribution. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Where this is published
+
+Merges to `main` also publish the site to GitHub Pages at [https://understanding-en301549.github.io/](https://understanding-en301549.github.io/). The built output is copied to [understanding-en301549.github.io](https://github.com/understanding-en301549/understanding-en301549.github.io), a publish-only repository that is not edited by hand. Pull requests are not published.
