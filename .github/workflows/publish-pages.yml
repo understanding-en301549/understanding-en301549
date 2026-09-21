@@ -1,0 +1,82 @@
+name: Publish to GitHub Pages
+
+# Publishing only ever happens from `main`. Pull requests must not reach the
+# public site, so there is no `pull_request` trigger here. The manual trigger
+# exists so the site can be republished without an empty commit to `main`.
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    # Forks do not have the deploy token and must not push to the site repo.
+    if: github.repository == 'understanding-en301549/understanding-en301549'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Check that the deploy token is available
+        env:
+          PAGES_DEPLOY_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+        run: |
+          if [ -z "$PAGES_DEPLOY_TOKEN" ]; then
+            echo "PAGES_DEPLOY_TOKEN is not set. Add a fine-grained token with" >&2
+            echo "Contents: write on understanding-en301549.github.io only." >&2
+            exit 1
+          fi
+
+      - name: Check out the publishing repository
+        uses: actions/checkout@v4
+        with:
+          repository: understanding-en301549/understanding-en301549.github.io
+          token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          path: pages
+
+      - name: Copy the built site over the published site
+        run: |
+          # `protect` keeps the destination file but still lets a file of the
+          # same name transfer, so --delete cannot remove the checkout metadata
+          # or the note explaining that the site repo is not edited by hand.
+          rsync --archive --delete \
+            --filter 'protect /.git/' \
+            --filter 'protect /README.md' \
+            _site/ pages/
+          # Eleventy output is not Jekyll input. Without this file Pages runs
+          # Jekyll over it and drops paths that start with an underscore.
+          touch pages/.nojekyll
+
+      - name: Commit and push
+        working-directory: pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          if git diff --cached --quiet; then
+            echo "Published site already matches this build."
+            exit 0
+          fi
+          git commit --message "Publish ${GITHUB_SHA}"
+          git push
