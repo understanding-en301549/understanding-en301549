@@ -4,13 +4,13 @@ This project is run by a group of editors. There is no legal entity behind it. T
 
 ## Editors
 
-1. Hidde de Vries
-2. Susanna Laurin
-3. Detlev Fischer
-4. Malin Hammarberg
-5. Peter Kemeny
-6. Shadi Abou-Zahra
-7. Wilco Fiers
+- Detlev Fischer
+- Hidde de Vries
+- Malin Hammarberg
+- Peter Kemeny
+- Shadi Abou-Zahra
+- Susanna Laurin
+- Wilco Fiers
 
 ## Decisions
 
@@ -21,4 +21,3 @@ This project is run by a group of editors. There is no legal entity behind it. T
 | Membership | Adding and removing editors uses the same two-thirds vote. |
 | Content authority | Editors decide the content of the site. |
 
-An editor's policy needs to be written. That policy is out of scope for this document.
